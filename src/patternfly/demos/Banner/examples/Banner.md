@@ -12,16 +12,17 @@ wrapperTag: div
 {{> page-template page-template--id="banner-basic-example"}}
 
 {{#* inline "page-template-main-content"}}
-  {{> banner-template banner-template--modifier="pf-m-sticky"}}
+  {{> banner-template banner-template--modifier="pf-m-sticky-top"}}
   {{> page-template-breadcrumb}}
   {{> page-template-title}}
   {{> page-template-gallery page-template-gallery--IsLongGallery="true" page-template-gallery--modifier="pf-m-fill"}}
+  {{> banner-template banner-template--modifier="pf-m-sticky-bottom"}}
 {{/inline}}
 ```
 ### Top/bottom
 ```hbs isFullscreen
 {{#> l-flex l-flex--modifier="pf-m-column pf-m-nowrap pf-m-space-items-none" l-flex--attribute='style="height: 100%;"'}}
-  {{> banner-template banner-template--modifier="pf-m-sticky"}}
+  {{> banner-template banner-template--modifier="pf-m-sticky-top"}}
   {{#> l-flex-item l-flex-item--modifier="pf-m-grow" l-flex-item--attribute='style="min-height: 0;"'}}
     {{> page-template page-template--id="banner-top-bottom-example"}}
 
@@ -31,6 +32,6 @@ wrapperTag: div
       {{> page-template-gallery page-template-gallery--IsLongGallery="true" page-template-gallery--modifier="pf-m-fill"}}
     {{/inline}}
   {{/l-flex-item}}
-  {{> banner-template banner-template--modifier="pf-m-sticky"}}
+  {{> banner-template banner-template--modifier="pf-m-sticky-bottom"}}
 {{/l-flex}}
 ```

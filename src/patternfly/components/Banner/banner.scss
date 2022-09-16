@@ -64,11 +64,18 @@
     --pf-c-banner--BackgroundColor: var(--pf-c-banner--m-warning--BackgroundColor);
   }
 
-  &.pf-m-sticky {
+  &.pf-m-sticky,
+  &.pf-m-sticky-top {
     position: sticky;
     top: 0;
     z-index: var(--pf-c-banner--m-sticky--ZIndex);
     box-shadow: var(--pf-c-banner--m-sticky--BoxShadow);
+  }
+
+  &.pf-m-sticky-bottom {
+    position: sticky;
+    bottom: 0;
+    z-index: var(--pf-c-banner--m-sticky--ZIndex);
   }
 
   a {

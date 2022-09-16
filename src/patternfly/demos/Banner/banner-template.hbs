@@ -4,7 +4,11 @@
       Localhost
     {{/display}}
     {{#> display display--type="none pf-u-display-block-on-lg"}}
-      This message is sticky to the top or bottom of the page.
+        {{#ifEquals banner-template--modifier "pf-m-sticky-bottom"}}
+          This message is sticky to the bottom.
+          {{else}}
+          This message is sticky to the top.
+        {{/ifEquals}}
     {{/display}}
     {{#> display display--type="none-on-lg"}}
       Drop some text on mobile, truncate if needed.
